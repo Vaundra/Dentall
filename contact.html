@@ -5,22 +5,214 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+    
     body{
         margin:0px;
+        background-color: lavender;
     }
+
     .sub{
-        margin-left: 75%;
-        padding: 50px;
+        margin-left:75%;
+        padding:50px;
     }
-    </style>
+
+    hr{
+        width: 90%;
+    }
+.sub1 h1{
+  position: relative;
+  margin-left: 30px;
+  font-size: 90px;
+}
+.sub1 p{
+  position: relative;
+  margin-left: 30px;
+  font-size: 30px;
+}                                                                                                                                                                                                  
+    .sub33{
+        margin-left: 60%;
+        width:39vw;
+        height:50vh;
+        margin-left: 850px;
+    }
+    .sub3a{
+        padding-left: 20px;
+    }
+    .sub3b{
+        display: inline;
+        padding-left: 20px;
+    }
+    .sub3c input{
+    margin-left:24px;
+    }
+    .sub3d{
+        display: inline;
+        margin-right: 85px;
+        padding-left: 22px;
+    }
+    .sub3d input{
+    margin-left:8px;
+    }
+    .sub3e input{
+    margin-left:12px;
+    }
+    .sub3f{
+        border-style: solid;
+        text-align: center;
+        width: 80%;
+        margin-left: 50px;
+    }
+    .sub3f:hover{
+        cursor: pointer;
+    }
+    .sub4 p{
+        font-size: 30px;
+        margin-left: 70px;
+    }
+    .sub4 h1{
+        font-size: 70px;
+        margin-left: 70px;
+    }
+    .sub4 img{
+        margin-top: 70px;
+        margin-left: 70px;
+        width: 90vw;
+        height: 80vh;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 4%;
+    }
+
+
+.sub14{
+    margin: 0px;
+    margin-bottom: 10px;
+    padding-left: 100px;
+    font-size: 20px;
+}
+.sub14 a{
+
+display: block;
+text-decoration:none;
+margin-left:400px;
+text-align: center;
+padding-top: 10px;
+
+}
+.sub14 a:hover{
+    text-decoration: underline;
+
+}
+.sub14{
+    display: flex;
+    margin-top: 100px;
+}
+.sub14b{
+    text-decoration: none;
+    color: black;
+}
+.sub14c p{
+    margin-left: 400px;
+    font-size: 20px;
+}
+.sub14c a{
+    padding-bottom: 100px;
+}
+
+</style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
+
 <body>
     <div class="sub">
-    <a href="HOME.html">HOME</a>
-    <a href="ABOUT.html">ABOUT</a>
-    <a href="service.html">SERVICE</a>
-    <a href="contact.html">CONTACT</a>
+    <a href="index.html"></a>
+    <a href="about.html">About</a>
+    <a href="work.html">Work</a>
+    <a href="service.html">Service</a>
+    <a href="contact.html">Contact</a>
+</div>
+<div class="sub1">
+    <p>[ Get in touch ]</p>
+    <h1 data-aos="fade-up" data-aos-duration="3000">Contact Us</h1>
+</div>
+<div class="sub2">
+    <div class="sub33">
+    <div class="sub3a">
+        <form>       
+        <label for =" ">First Name</label>
+        <input type="text" style="width:25%;" required>
+        <div class="sub3b">
+        <label for =" ">Last Name</label>
+        <input type="text" style="width:25%" required>
+        </div><br><br><br>
+        <div class="sub3c">
+        <label for =" ">E-mail</label>
+        <input type="email" style="width:25%;" required>
+        <div class="sub3d">
+        <label for =" ">Phone No</label>
+        <input type="text" style="width:25%;" required>
+        </div><br><br><br>
+        <div class="sub3e">
+        <label for ="Message">Message</label>
+        <input type="text" style="width:75%;" required>
+        </div><br><br><br>
+        <div class="sub3f">
+            <button onclick="validateForm()()">Submit</button>
+        </div>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="sub4">
+        <p>[ WHERE TO FIND US ] </p>
+        <h1>Visit Our Studio</h1>
+        <hr>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfddnOsvT-ePG7C64ShUGMUyJpYs-2yoCp4r1h9TPIIw&s=10">
+    </div>
+    <hr>
+
+    <div class="sub14">
+    <div class="sub14a">
+    <p>[INFORMATION]</p>
+    <h5>500 Terry Francine St.<br>San Francisco, CA 94158<br><br> Privacy Policy<br> Accessibility Statement</h5>
+    </div>
+    <div class="sub14b">
+    <a>[MENU]</a>
+    <a href="about.html">About</a>
+    <a href="work.html">Work</a>
+    <a href="service.html">Service</a>
+    <a href="contact.html">Contact</a>
+    </div>
+    <div class="sub14c">
+        <p>[ SOCIALS ]</p>
+        <p>123-456-7890</p>
+        <a href="mailto:someone@example.com">info@mysite.com</a>
+    </div>   
 </div>
     
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+   function validateForm() {
+
+    let inputs = document.querySelectorAll("input");
+
+    for(let i = 0; i < inputs.length; i++) {
+        if(inputs[i].value.trim() === "") {
+            alert("Please fill all required fields");
+            return;
+        }
+    }
+
+    alert("Form Submitted Successfully");
+}
+
+
+    
+</script>
+  
+
 </html>
